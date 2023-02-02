@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]> <html class="ie9 lt-ie9"><![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <!--[if IE]>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <![endif]-->
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="initial-scale=1.0" name="viewport">
+        <title>Ian Venskus</title>
+        <meta name="keywords" content="Ian Venskus, Advertising, Marketing, Branding, Design, Development, User Experience, Research, Animation, Video Editing">
+        <meta name="description" content="Raised in Rumford, Maine right as the Internet was rising in popularity; Ian has been creating things for the world wide web ever since.">
+        <meta name="author" content="Ian Venskus">
+
+        <!-- NO ROBOTS META TAG - THIS IS FOR TUTORIALS ONLY DO NOT USE IN PROD -->
+        <meta name="robots" content="noindex, nofollow">
+        <!--END NO ROBOTS META TAG -->
+
+        <!-- Brand Styles -->
+        <link href="../../../../_brand/brand.css" rel="stylesheet" type="text/css">
+        <!-- End Brand Styles -->
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Ian Venskus">
+        <meta property="og:description" content="Raised in Rumford, Maine right as the Internet was rising in popularity; Ian has been creating things for the world wide web ever since.">
+        <meta property="og:url" content="https://ianvenskus.com/">
+        <meta property="og:image" content="https://ianvenskus.com/_resources/images/icons/social-share-2.jpg">
+        <meta name="twitter:site" content="https://ianvenskus.com/">
+        <meta property="twitter:image" content="https://ianvenskus.com/_resources/images/icons/social-share-2.jpg">
+        <meta name="twitter:dnt" content="on">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="theme-color" content="#2C2C2C">
+
+        <!-- <link rel="manifest" href="/manifest.webmanifest"> -->
+        <meta name="application-name" content="Ian Venskus">
+        <meta name="apple-mobile-web-app-title" content="Ian Venskus">
+
+        <style>
+            body {position: static; overflow: auto;}
+
+            .primary-header {
+                width: 100%;
+                text-align: center;
+                padding: 2.5%;
+                border: 1px solid #F9F9F9;
+            }
+            .main-content {
+                width: 84%;
+                margin: 0 auto;
+            }
+            .primary-footer {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                border: 1px solid #F9F9F9;
+            }
+            .primary-footer p {margin: 0.5em 0 0.5em 0;}
+
+            .lesson-02 {position: relative; overflow: visible;}
+            .lesson-02 header {
+                text-align: center;
+                padding: 2.5%;
+            }
+            .lesson-02 header h2 {
+                color: #FE5100;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="primary-header" data-info="primary-header">
+            <h1>Vanilla JS Academy Lesson 02</h1>
+        </header>
+        <main id="mainContent" class="main-content" data-info="main-content">
+            <section class="lesson-02">
+                <header>
+                    <h2>Project: Treasure Chest Library</h2>
+                </header>
+
+
+            </section><!--end lesson-02 -->
+        </main><!-- end main-->
+        <footer class="primary-footer" data-info="primary-footer">
+            <p><smalL>Ian Venskus</smalL></p>
+        </footer>
+
+        <script>
+            let TreasureChest = (function () {
+                /**
+                 * Create the Constructor object
+                 * @author Ian Venskus
+                 * @param {Number} num The starting total
+                 */
+                function Constructor (num = 0) {
+                    this.bronze = num;
+                    this.silver = num;
+                    this.gold = num;
+                }
+
+                /**
+                 * Add two or more numbers together
+                 * @param {...Number} nums The numbers to add
+                 */
+                 Constructor.prototype.add = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.total = this.total + num;
+                    }
+
+                    // Return the total
+                    return this.total;
+                };
+
+
+                /**
+                 * Add two or more numbers together
+                 * @param {...Number} nums The numbers to add
+                 */
+                Constructor.prototype.addBronze = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.bronze = this.bronze + num;
+                    }
+
+                    // Return the total
+                    return this.bronze;
+                };
+
+                Constructor.prototype.addSilver = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.silver = this.silver + num;
+                    }
+
+                    // Return the total
+                    return this.silver;
+                };                
+
+                Constructor.prototype.addGold = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.gold = this.gold + num;
+                    }
+
+                    // Return the total
+                    return this.gold;
+                };
+
+
+                /**
+                 * Subtract two or more numbers together
+                 * @param {...Number} nums The numbers to subtract
+                 */
+                 Constructor.prototype.subtractBronze = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.bronze = this.bronze - num;
+                    }
+
+                    // Return the total
+                    return this.bronze;
+                };
+
+                Constructor.prototype.subtractSilver = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.silver = this.silver - num;
+                    }
+
+                    // Return the total
+                    return this.silver;
+                };                
+
+                Constructor.prototype.subtractGold = function (...nums) {
+                    //Loop through each number and do math
+                    for (let num of nums) {
+                        this.gold = this.gold - num;
+                    }
+
+                    // Return the total
+                    return this.gold;
+                };
+
+
+                Constructor.prototype.getLoot = function () {
+                    return 'Inventory Contains - Bronze: ' + this.bronze + ', Silver: ' + this.silver + ', Gold: ' + this.gold + ', Total Value ' + ((this.bronze * 1) + (this.silver * 2)  + (this.gold * 3));
+                };
+
+                return Constructor;
+
+            })();
+
+            // Create a new instance
+            let captain = new TreasureChest(),
+                firstMate = new TreasureChest(),
+                monkey = new TreasureChest();
+
+            //Captain
+            captain.addBronze(1, 3);
+            captain.addSilver(4, 3);
+            captain.addGold(12, 12);
+
+            console.log("Captain's", captain.getLoot());
+            
+
+            //First Mate
+            firstMate.addBronze(1);
+            firstMate.addSilver(2, 1);
+            firstMate.addGold(1, 4);
+
+            console.log("First Mate's", firstMate.getLoot());
+
+            
+
+
+            //First Mate Steals Captains Gold
+            console.log("First Mate Steals Captain's Gold");
+            firstMate.addGold(captain.gold);
+            captain.subtractGold(captain.gold);
+            
+            console.log("Captain's", captain.getLoot());
+            console.log("First Mate's", firstMate.getLoot());
+
+
+            //Monkey Steals First Mate's Gold
+            console.log("Monkey Steals First Mate's Gold");
+            monkey.addGold(firstMate.gold);
+            firstMate.subtractGold(firstMate.gold);
+
+            console.log("Captain's ", captain.getLoot());
+            console.log("First Mate's", firstMate.getLoot());
+            console.log("Monkey's", monkey.getLoot());
+
+        </script>
+
+
+    </body>
+</html>
